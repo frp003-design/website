@@ -1,0 +1,422 @@
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background-color: #f0fff0;
+color: #333;
+line-height: 1.6;
+}
+
+header {
+text-align: center;
+background: #2e7d32;
+color: white;
+padding: 20px;
+}
+
+nav {
+background: #1b5e20;
+text-align: center;
+padding: 0.5rem;
+}
+
+nav a {
+color: white;
+margin: 0 15px;
+text-decoration: none;
+font-weight: bold;
+}
+
+nav a:hover {
+color: #a5d6a7;
+}
+
+.hero {
+background: url("YEON.jpg") no-repeat center center/cover;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+}
+
+.hero::after {
+content: "";
+
+position: absolute;
+top: 0; left: 0;
+width: 100%; height: 100%;
+background: rgba(0, 60, 0, 0.5);
+}
+
+.hero-text {
+position: relative;
+color: white;
+text-align: center;
+z-index: 1;
+padding: 20px;
+}
+
+.hero-text h2 {
+font-size: 2.5rem;
+margin-bottom: 1rem;
+}
+
+.hero-text p {
+font-size: 1.2rem;
+}
+
+.container {
+max-width: 1300px;
+margin: auto;
+padding: 20px;
+}
+
+.content-wrapper {
+display: flex;
+flex-wrap: wrap;
+gap: 30px;
+margin-top: 30px;
+}
+
+.about-left {
+flex: 1.2;
+min-width: 350px;
+}
+
+.about-left h2 {
+color: #2e7d32;
+margin-bottom: 15px;
+}
+
+.about-left p {
+margin-bottom: 15px;
+}
+
+.mission-vision {
+position: relative;
+margin: 20px 0;
+}
+
+.mission-vision img {
+width: 100%;
+border-radius: 12px;
+box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+display: block;
+}
+
+.mission-vision::after {
+content: "";
+position: absolute;
+top: 0; left: 0;
+width: 100%; height: 100%;
+background: rgba(0,0,0,0.6);
+border-radius: 12px;
+}
+
+.mission-text {
+position: absolute;
+top: 50%; left: 50%;
+transform: translate(-50%, -50%);
+color: white;
+text-align: center;
+font-size: 1.2rem;
+font-weight: bold;
+padding: 20px;
+width: 80%;
+z-index: 2;
+}
+
+.mission-text h2 {
+margin-bottom: 10px;
+color: #ffeb3b;
+}
+
+.mission-text ul {
+list-style: none;
+padding: 0;
+
+margin: 0;
+}
+
+.mission-text li {
+margin: 8px 0;
+}
+
+.form-container {
+flex: 1;
+min-width: 350px;
+background: white;
+padding: 25px;
+border-radius: 12px;
+box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.form-container h2 {
+text-align: center;
+color: #2e7d32;
+margin-bottom: 20px;
+}
+
+form label {
+font-weight: bold;
+color: #333;
+display: block;
+margin-bottom: 6px;
+}
+
+form input, form select, form textarea {
+width: 100%;
+padding: 10px;
+margin-bottom: 15px;
+border: 1px solid #ccc;
+border-radius: 6px;
+font-size: 1rem;
+transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+border: 1px solid #2e7d32;
+box-shadow: 0 0 6px rgba(46,125,50,0.5);
+outline: none;
+}
+
+.options-inline {
+display: flex;
+gap: 15px;
+margin-bottom: 15px;
+flex-wrap: wrap;
+}
+
+.options-inline label {
+font-weight: normal;
+display: flex;
+align-items: center;
+gap: 5px;
+}
+
+.form-buttons {
+display: flex;
+justify-content: center;
+}
+
+form input[type="submit"] {
+width: 100%;
+background: #2e7d32;
+color: white;
+border: none;
+
+padding: 12px;
+border-radius: 6px;
+cursor: pointer;
+font-size: 1rem;
+transition: 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+background: #1b5e20;
+}
+
+#success-message {
+display: none;
+margin-top: 20px;
+padding: 15px;
+background: #c8e6c9;
+border: 1px solid #2e7d32;
+border-radius: 8px;
+color: #1b5e20;
+font-weight: bold;
+text-align: center;
+animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+from {opacity: 0; transform: translateY(-10px);}
+to {opacity: 1; transform: translateY(0);}
+}
+
+.container h2 {
+text-align: center;
+color: #2e7d32;
+margin-bottom: 10px;
+}
+
+.intro {
+text-align: center;
+font-size: 1.1rem;
+margin-bottom: 30px;
+color: #444;
+}
+
+.course {
+background: white;
+margin: 15px 0;
+border-radius: 10px;
+
+box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+overflow: hidden;
+}
+
+.course-header {
+background: #388e3c;
+color: white;
+padding: 15px;
+font-size: 1.2rem;
+cursor: pointer;
+user-select: none;
+}
+
+.course-header:hover {
+background: #2e7d32;
+}
+
+.course-content {
+display: none;
+padding: 15px;
+background: #f9fff9;
+text-align: center;
+}
+
+.images {
+display: flex;
+justify-content: center;
+gap: 15px;
+flex-wrap: wrap;
+margin-bottom: 15px;
+}
+
+.images img {
+width: 200px;
+height: 200px;
+object-fit: cover;
+border-radius: 10px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.gallery {
+max-width: 1100px;
+margin: 30px auto;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 20px;
+
+padding: 10px;
+}
+
+.gallery img {
+width: 100%;
+height: 320px;
+object-fit: cover;
+border-radius: 12px;
+box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+transform: scale(1.05);
+}
+
+.container h2 {
+color: #2e7d32;
+margin-bottom: 20px;
+}
+
+.social-media {
+margin-top: 30px;
+}
+
+.social-media h3 {
+color: #2e7d32;
+margin-bottom: 15px;
+}
+
+.social-icons {
+display: flex;
+justify-content: center;
+gap: 30px;
+flex-wrap: wrap;
+}
+
+.icon-box {
+text-align: center;
+}
+
+.icon-box img {
+width: 60px;
+height: 60px;
+border-radius: 50%;
+transition: transform 0.3s, box-shadow 0.3s;
+
+object-fit: cover;
+}
+
+.icon-box img:hover {
+transform: scale(1.2);
+box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.icon-box p {
+margin-top: 8px;
+font-size: 0.9rem;
+font-weight: bold;
+color: #2e7d32;
+}
+
+.contact-info {
+margin-top: 20px;
+color: #333;
+font-size: 1rem;
+line-height: 1.6;
+text-align: center;
+}
+
+.container h2 {
+text-align: center;
+color: #2e7d32;
+margin-bottom: 20px;
+}
+
+.rating-box {
+text-align: center;
+margin-bottom: 20px;
+}
+
+.stars {
+display: flex;
+justify-content: center;
+gap: 8px;
+font-size: 2rem;
+cursor: pointer;
+}
+
+.star {
+color: #ccc;
+transition: color 0.3s;
+}
+
+
+.star.selected,
+.star.hover {
+color: gold;
+}
+
+#success-message, #user-comment {
+display: none;
+margin-top: 20px;
+padding: 15px;
+border-radius: 8px;
+font-weight: bold;
+text-align: center;
+animation: fadeIn 0.6s ease-in-out;
+}
+
+#success-message {
+background: #c8e6c9;
+border: 1px solid #2e7d32;
+color: #1b5e20;
+}
+
+#user-comment {
+background: #e3f2fd;
+border: 1px solid #2196f3;
+color: #0d47a1;
+}

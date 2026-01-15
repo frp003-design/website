@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About Us - Bright Future College</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>About Us</h1>
+</header>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="courses.html">Courses</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact Us</a>
+<a href="feedback.html">Feedback</a>
+</nav>
+
+<div class="container">
+<div class="content-wrapper">
+<div class="about-left">
+<h2>Welcome to Bright Future College 🌿</h2>
+<p>
+Established in 1995, Bright Future College is committed to
+providing quality education
+and fostering innovation. Our eco-friendly campus offers modern
+facilities, digital classrooms,
+and a nurturing environment for both academic and personal
+growth.
+</p>
+<p>
+We focus on holistic development through academics, sports,
+cultural activities,
+and community service. Our alumni network spans the globe,
+contributing
+to industries, research, and entrepreneurship.
+</p>
+<div class="mission-vision">
+<img src="campus.avif" alt="Our Mission and Vision">
+<div class="mission-text">
+<h2>Our Mission & Vision</h2>
+<ul>
+<li>🎓 Deliver world-class education and skill
+development.</li>
+<li>🌍 Promote sustainability through eco-friendly
+practices.</li>
+<li>🤝 Encourage innovation, leadership, and teamwork.</li>
+<li>💼 Prepare students for global career
+opportunities.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="form-container">
+<h2>Student Registration Form</h2>
+<form id="registrationForm" onsubmit="handleSubmit(event)">
+<label>Name:</label>
+<input type="text" required>
+
+<label>Email:</label>
+<input type="email" required>
+<label>Contact Number:</label>
+<input type="tel" required>
+
+<label>Gender:</label>
+<div class="options-inline">
+<label><input type="radio" name="gender" required>
+Male</label>
+<label><input type="radio" name="gender"> Female</label>
+</div>
+
+<label>Date of Birth:</label>
+<input type="date">
+
+<label>Course:</label>
+<select>
+<option>B.Sc.</option>
+<option>B.A.</option>
+<option>MBA</option>
+<option>B.Com</option>
+</select>
+
+<label>Interests:</label>
+<div class="options-inline">
+<label><input type="checkbox"> Sports</label>
+<label><input type="checkbox"> Music</label>
+<label><input type="checkbox"> Coding</label>
+<label><input type="checkbox"> Art</label>
+</div>
+
+<label>Address:</label>
+<textarea rows="3"></textarea>
+
+<div class="form-buttons">
+<input type="submit" value="Submit">
+</div>
+</form>
+<div id="success-message">
+✅ Registration has been submitted. Please wait 6 days to get a
+message from the college.
+</div>
+</div>
+</div>
+</div>
+
+<script>
+function handleSubmit(event) {
+event.preventDefault();
+document.getElementById("registrationForm").reset();
+document.getElementById("success-message").style.display = "block";
+}
+</script>
+</body>
+</html>

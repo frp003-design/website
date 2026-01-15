@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Courses - Bright Future College</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>Our Courses</h1>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="courses.html">Courses</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact Us</a>
+<a href="feedback.html">Feedback</a>
+</nav>
+
+<div class="container">
+<h2>Explore Our Programs</h2>
+<p class="intro">
+At Bright Future College, our programs blend academics, skills, and
+practical training.
+Each course section below showcases multiple images to give you a
+better feel of student life and facilities.
+</p>
+<div class="course">
+<div class="course-header">B.Sc. - Bachelor of Science</div>
+<div class="course-content">
+<div class="images">
+<img src="bscl.jpg" alt="B.Sc. Lab">
+<img src="B.Sc. Students.jpg" alt="B.Sc. Students">
+<img src="bsc.jpg" alt="B.Sc. Research">
+</div>
+<p>
+The B.Sc. program provides strong foundations in Physics,
+Chemistry, Computer Science,
+and Mathematics. With state-of-the-art labs and research
+opportunities, students are
+prepared for advanced studies and scientific careers.
+</p>
+</div>
+</div>
+<div class="course">
+<div class="course-header">B.A. - Bachelor of Arts</div>
+<div class="course-content">
+<div class="images">
+<img src="ba1.jpg" alt="B.A. Literature Class">
+<img src="ba2.jpg" alt="B.A. Debate Event">
+<img src="ba3.jpg" alt="B.A. Arts Program">
+</div>
+<p>
+The B.A. program nurtures creativity and critical thinking.
+Students can explore majors like
+English, History, Sociology, and Psychology, while participating
+in seminars, debates,
+and cultural festivals.
+</p>
+</div>
+</div>
+<div class="course">
+<div class="course-header">MBA - Master of Business
+Administration</div>
+<div class="course-content">
+<div class="images">
+<img src="mba1.jpg" alt="MBA Class">
+<img src="mba2.webp" alt="MBA Project Work">
+<img src="mba3.jpg" alt="MBA Seminar">
+</div>
+<p>
+Our MBA program is industry-focused, helping students master
+leadership, finance,
+marketing, and entrepreneurship. Through projects and workshops,
+students develop
+real-world business strategies.
+</p>
+</div>
+</div>
+<div class="course">
+<div class="course-header">B.Com. - Bachelor of Commerce</div>
+<div class="course-content">
+<div class="images">
+<img src="bcom.jpg" alt="B.Com. Class">
+<img src="bcom2.jpg" alt="B.Com. Finance Training">
+<img src="bcom3.jpg" alt="B.Com. Seminar">
+</div>
+<p>
+The B.Com. program offers in-depth knowledge of Accounting,
+Finance, Economics, and Business Law.
+Students gain practical exposure through case studies, financial
+projects, and internships,
+preparing them for careers in commerce, banking, and corporate
+sectors.
+</p>
+</div>
+</div>
+</div>
+
+<script>
+document.querySelectorAll(".course-header").forEach(header => {
+header.addEventListener("click", () => {
+const content = header.nextElementSibling;
+content.style.display = (content.style.display === "block") ?
+"none" : "block";
+});
+});
+</script>
+</body>
+</html>

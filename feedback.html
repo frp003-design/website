@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Feedback - Bright Future College</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>Feedback</h1>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="courses.html">Courses</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact Us</a>
+<a href="feedback.html">Feedback</a>
+</nav>
+
+<div class="container">
+<h2>Give Us Your Feedback</h2>
+
+<div class="rating-box">
+<label>Rating:</label>
+<div class="stars" id="starRating">
+<span class="star" data-value="1">★</span>
+<span class="star" data-value="2">★</span>
+<span class="star" data-value="3">★</span>
+<span class="star" data-value="4">★</span>
+<span class="star" data-value="5">★</span>
+</div>
+<input type="hidden" id="ratingValue" required>
+</div>
+
+<form id="feedbackForm" onsubmit="handleFeedback(event)">
+
+
+<label>Name:</label>
+<input type="text" id="userName" required>
+
+<label>Comments:</label>
+<textarea rows="3" id="userCommentInput" required></textarea>
+
+<div class="form-buttons">
+<input type="submit" value="Submit">
+</div>
+</form>
+<div id="user-comment"></div>
+<div id="success-message">
+✅ Thank you for your feedback! We value your input and will use it
+to improve.
+</div>
+</div>
+
+<script>
+const stars = document.querySelectorAll(".star");
+const ratingValue = document.getElementById("ratingValue");
+
+stars.forEach((star, index) => {
+star.addEventListener("click", () => {
+ratingValue.value = star.dataset.value;
+
+37
+
+stars.forEach((s, i) => {
+s.classList.toggle("selected", i <= index);
+});
+});
+
+star.addEventListener("mouseover", () => {
+stars.forEach((s, i) => {
+s.classList.toggle("hover", i <= index);
+});
+});
+
+star.addEventListener("mouseout", () => {
+stars.forEach((s) => s.classList.remove("hover"));
+});
+});
+
+function handleFeedback(event) {
+event.preventDefault();
+if (!ratingValue.value) {
+alert("Please select a rating before submitting.");
+return;
+}
+
+38
+
+const userComment =
+document.getElementById("userCommentInput").value;
+const commentBox = document.getElementById("user-comment");
+const successBox = document.getElementById("success-message");
+
+commentBox.innerText = "💬 Your comment: " + userComment;
+commentBox.style.display = "block";
+
+setTimeout(() => {
+commentBox.style.display = "none";
+successBox.style.display = "block";
+}, 3000);
+
+document.getElementById("feedbackForm").reset();
+ratingValue.value = "";
+stars.forEach(s => s.classList.remove("selected"));
+}
+</script>
+</body>
+</html>
